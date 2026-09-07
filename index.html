@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade · SellerScope ML</title>
+<style>
+  :root {
+    --papel: #FFFFFF; --canvas: #F6F6F4; --linha: #DEDFDB;
+    --tinta: #111111; --tinta-fraca: #6D6E69; --alta: #2563EB;
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--canvas); color: var(--tinta);
+    font-family: var(--font); font-size: 15px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .folha { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 1px solid var(--linha); padding-bottom: 24px; margin-bottom: 32px; }
+  .marca {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 800; font-size: 15px; letter-spacing: -0.01em;
+  }
+  .disco {
+    width: 26px; height: 26px; border-radius: 50%; background: #1544CB;
+    color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 15px;
+  }
+  h1 { font-size: 27px; letter-spacing: -0.035em; margin: 18px 0 6px; }
+  .sub { color: var(--tinta-fraca); font-size: 14px; margin: 0; }
+  h2 {
+    font-size: 17px; letter-spacing: -0.02em; margin: 36px 0 10px;
+    padding-top: 22px; border-top: 1px solid var(--linha);
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  h3 { font-size: 14px; margin: 22px 0 6px; }
+  p, li { color: #23241F; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 6px; font-size: 14px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--tinta-fraca); font-weight: 700; }
+  td:first-child { white-space: nowrap; font-weight: 600; }
+  .caixa {
+    background: var(--papel); border: 1px solid var(--linha); border-radius: 6px;
+    padding: 16px 18px; margin: 16px 0;
+  }
+  .destaque { border-left: 3px solid var(--alta); border-radius: 0 6px 6px 0; }
+  .preencher { background: #FFF8E1; border-left: 3px solid #9E6400; border-radius: 0 6px 6px 0; }
+  code { background: var(--papel); border: 1px solid var(--linha); border-radius: 3px; padding: 1px 5px; font-size: 13px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--linha); color: var(--tinta-fraca); font-size: 13px; }
+  a { color: var(--alta); }
+  @media (prefers-color-scheme: dark) {
+    :root { --papel: #17181A; --canvas: #0F1011; --linha: #2A2C2F; --tinta: #F2F2F0; --tinta-fraca: #9A9B96; }
+    p, li { color: #DCDDD9; }
+    .preencher { background: #2A2416; }
+  }
+</style>
+</head>
+<body>
+<div class="folha">
+
+<header>
+  <span class="marca"><span class="disco">S</span>SellerScope ML</span>
+  <h1>Política de Privacidade</h1>
+  <p class="sub">Vigente desde <strong>7 de setembro de 2026</strong> · versão 1.0.0 da extensão</p>
+</header>
+
+<div class="caixa preencher">
+  <strong>Antes de publicar, preencha:</strong> a razão social e o CNPJ do controlador
+  (na seção “Quem responde por estes dados”) e confirme o e-mail de contato. O restante
+  do documento foi levantado do código-fonte da versão 1.0.0.
+</div>
+
+<p>
+  Esta política descreve o que a extensão <strong>SellerScope ML</strong> faz com dados. Ela vale
+  para a extensão de navegador e para o servidor que a acompanha. A regra que governa
+  todo o resto é simples: <strong>a extensão só olha páginas do Mercado Livre Brasil</strong>, e
+  quase tudo que ela guarda nunca sai do seu computador.
+</p>
+
+<h2>O que a extensão faz</h2>
+<p>
+  Ela lê as páginas de busca e de anúncio do Mercado Livre que <em>você</em> abriu e monta
+  painéis de análise por baixo dos resultados: preço, tarifa estimada, margem, idade do
+  anúncio, visitas, concorrentes no catálogo. Nada acontece em página que não seja
+  <code>mercadolivre.com.br</code>.
+</p>
+
+<h2>O que fica só no seu navegador</h2>
+<p>
+  Guardado em <code>chrome.storage.local</code>, no seu perfil do Chrome. Não é enviado a
+  lugar nenhum e some quando você desinstala a extensão.
+</p>
+
+<table>
+  <thead><tr><th>Dado</th><th>Para quê</th></tr></thead>
+  <tbody>
+    <tr><td>Preferências</td><td>Tipo de anúncio, logística, tema, CEP de referência, custo fixo, perfil fiscal e o endereço do servidor de dados.</td></tr>
+    <tr><td>Suas listas</td><td>Watchlist, histórico de anúncios vistos e a lista de comparação.</td></tr>
+    <tr><td>Caches de leitura</td><td>Fichas de anúncio, visitas, tarifas, preços e descrições já consultados, para não repetir a consulta.</td></tr>
+    <tr><td>Sessão da sua conta</td><td>O token de acesso da sua conta SellerScope e, se você conectar, o da sua conta do Mercado Livre.</td></tr>
+    <tr><td>Contadores de uso</td><td>Quantas consultas a sessão fez, para respeitar os limites de chamada.</td></tr>
+    <tr><td>Estado da interface</td><td>Se você já viu a tela de boas-vindas, quais painéis estão recolhidos, quais avisos dispensou.</td></tr>
+  </tbody>
+</table>
+
+<h2>O que sai do seu computador</h2>
+
+<h3>1. Para o servidor da SellerScope</h3>
+<p>
+  O servidor guarda em cache dados públicos do Mercado Livre, para que a mesma consulta
+  não seja refeita por cada usuário. O que ele recebe:
+</p>
+<ul>
+  <li><strong>Identificadores públicos do Mercado Livre</strong>: código do anúncio, do vendedor, do produto de catálogo e da categoria.</li>
+  <li><strong>Categoria, tipo de anúncio e preço</strong> quando você consulta a tarifa exata.</li>
+  <li><strong>Seu CEP</strong>, quando você consulta o frete de um anúncio. Ele é necessário porque o próprio Mercado Livre exige um destino para calcular frete. <strong>O CEP não é armazenado em claro:</strong> a chave do cache usa um apelido criptográfico dele com um segredo do servidor.</li>
+  <li><strong>Seu token de licença</strong>, para confirmar que a assinatura está ativa.</li>
+  <li><strong>Dados do anúncio na tela</strong>, quando você pede uma sugestão ao assistente de IA. São os mesmos números que o painel já mostra.</li>
+  <li><strong>Sua conta do Mercado Livre</strong>, apenas se você conectá-la na tela “Minha Loja”: o token de autorização e o seu código de vendedor, para buscar os seus próprios anúncios e vendas.</li>
+</ul>
+<p>
+  O endereço padrão é <code>sellerscope-ml-api.lucas21sarmento.workers.dev</code>, e ele é
+  editável nas Configurações. <strong>Se você apagar esse campo, a extensão para de fazer
+  qualquer consulta ao servidor</strong> e passa a mostrar apenas o que lê da página aberta.
+</p>
+
+<div class="caixa destaque">
+  <strong>Cache compartilhado.</strong> Fichas de anúncio e preços observados são gravados num
+  cache que outros usuários também leem. São dados públicos do Mercado Livre — os mesmos
+  que qualquer pessoa vê ao abrir o anúncio. <strong>Nada seu vai junto:</strong> nem o seu CEP,
+  nem o seu perfil fiscal, nem os seus custos, nem as suas listas.
+</div>
+
+<h3>2. Para o Mercado Livre</h3>
+<p>
+  Para ler dados que só existem na página do anúncio — data de criação, estoque, tipo de
+  anúncio —, a extensão baixa o HTML dessa página usando a sessão que já está no seu
+  navegador, exatamente como se você tivesse aberto a página. <strong>Nenhum dado seu é
+  enviado além do que o próprio navegador já enviaria</strong> nessa visita, e o endereço é
+  sempre montado a partir do código do anúncio, com o destino conferido depois de
+  eventuais redirecionamentos.
+</p>
+<p>
+  Você pode desligar isso por completo: em Configurações, desmarque a busca de ficha. A
+  extensão fica 100% passiva e usa apenas o que a página de busca já mostra.
+</p>
+
+<h3>3. Para o Supabase (sua conta)</h3>
+<p>
+  O login e a assinatura usam o Supabase. Ao entrar, o seu <strong>e-mail e senha</strong> vão
+  direto para lá — a senha não passa por nenhum servidor nosso e não é guardada em lugar
+  nenhum. Depois disso, apenas o token de renovação é usado.
+</p>
+<p>
+  O formulário de login roda numa página da <strong>própria extensão</strong>, isolada da página
+  do Mercado Livre: nenhum script do site consegue ler o que você digita ali.
+</p>
+
+<h2>O que a extensão não faz</h2>
+<ul>
+  <li>Não lê o seu histórico de navegação, cookies, senhas salvas ou dados de preenchimento automático.</li>
+  <li>Não age em nenhum site fora de <code>mercadolivre.com.br</code>.</li>
+  <li>Não usa Google Analytics nem qualquer ferramenta de telemetria de terceiros.</li>
+  <li>Não vende, aluga nem compartilha seus dados com terceiros para publicidade.</li>
+  <li>Não coleta seu nome, telefone, documento, endereço completo ou dados de pagamento.</li>
+  <li>Não faz compras, não altera anúncios e não envia mensagens em seu nome.</li>
+</ul>
+
+<h2>Permissões, e por que cada uma</h2>
+<table>
+  <thead><tr><th>Permissão</th><th>Por quê</th></tr></thead>
+  <tbody>
+    <tr><td><code>storage</code></td><td>Guardar suas preferências, listas e caches no seu próprio navegador.</td></tr>
+    <tr><td><code>identity</code></td><td>Abrir a tela de autorização do Mercado Livre quando você conecta sua conta em “Minha Loja”. Só é usada se você clicar em conectar.</td></tr>
+    <tr><td><code>mercadolivre.com.br</code></td><td>Ler as páginas de busca e de anúncio e desenhar os painéis. É o único site em que a extensão roda.</td></tr>
+    <tr><td><code>*.supabase.co</code></td><td>Login, assinatura e verificação de licença.</td></tr>
+  </tbody>
+</table>
+
+<h2>Por quanto tempo os dados ficam</h2>
+<table>
+  <thead><tr><th>Onde</th><th>Prazo</th></tr></thead>
+  <tbody>
+    <tr><td>No seu navegador</td><td>Até você desinstalar a extensão ou limpar os dados do site. Os caches de leitura se renovam sozinhos.</td></tr>
+    <tr><td>No cache do servidor</td><td>De 6 horas a 120 dias, conforme o tipo de dado — todos são dados públicos do Mercado Livre.</td></tr>
+    <tr><td>Sua conta</td><td>Enquanto a conta existir. Você pode pedir a exclusão pelo e-mail abaixo.</td></tr>
+  </tbody>
+</table>
+
+<h2>Seus direitos (LGPD)</h2>
+<p>
+  A Lei Geral de Proteção de Dados (Lei 13.709/2018) garante a você confirmar a existência
+  de tratamento, acessar seus dados, corrigi-los, pedir anonimização ou exclusão, e revogar
+  o consentimento. Para exercer qualquer um desses direitos, escreva para o e-mail abaixo.
+</p>
+<p>
+  A maior parte dos dados está no seu próprio navegador e você pode apagá-los a qualquer
+  momento, desinstalando a extensão ou limpando os dados do site nas configurações do
+  Chrome.
+</p>
+
+<h2>Quem responde por estes dados</h2>
+<div class="caixa preencher">
+  <p style="margin:0 0 8px"><strong>Controlador:</strong> [RAZÃO SOCIAL] — CNPJ [00.000.000/0001-00]</p>
+  <p style="margin:0"><strong>Contato:</strong> <a href="mailto:suporte@sellerscope.com.br">suporte@sellerscope.com.br</a></p>
+</div>
+
+<h2>Mudanças nesta política</h2>
+<p>
+  Se algo mudar, a data no topo muda junto e a versão da extensão é indicada. Alterações
+  que ampliem o que é coletado serão anunciadas dentro da própria extensão antes de entrar
+  em vigor.
+</p>
+
+<h2>Relação com o Mercado Livre</h2>
+<p>
+  O SellerScope ML é uma ferramenta independente. <strong>Não é afiliado, patrocinado nem
+  endossado pelo Mercado Livre</strong>, e “Mercado Livre” é marca dos seus respectivos
+  titulares.
+</p>
+
+<footer>
+  SellerScope ML · versão 1.0.0 · última atualização em 7 de setembro de 2026
+</footer>
+
+</div>
+</body>
+</html>
