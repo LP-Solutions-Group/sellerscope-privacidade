@@ -63,7 +63,7 @@
 <header>
   <span class="marca"><span class="disco">S</span>SellerScope ML</span>
   <h1>Política de Privacidade</h1>
-  <p class="sub">Vigente desde <strong>7 de setembro de 2026</strong> · versão 1.0.0 da extensão</p>
+  <p class="sub">Vigente desde <strong>15 de setembro de 2026</strong> · versão 1.0.0 da extensão</p>
 </header>
 
 <div class="caixa preencher">
@@ -89,17 +89,18 @@
 
 <h2>O que fica só no seu navegador</h2>
 <p>
-  Guardado em <code>chrome.storage.local</code>, no seu perfil do Chrome. Não é enviado a
-  lugar nenhum e some quando você desinstala a extensão.
+  Guardado em <code>chrome.storage.local</code>, no seu perfil do Chrome, e some quando você
+  desinstala a extensão. O CEP e o token da sessão também vão nas consultas descritas na
+  seção seguinte; o resto não sai daqui.
 </p>
 
 <table>
   <thead><tr><th>Dado</th><th>Para quê</th></tr></thead>
   <tbody>
-    <tr><td>Preferências</td><td>Tipo de anúncio, logística, tema, CEP de referência, custo fixo, perfil fiscal e o endereço do servidor de dados.</td></tr>
+    <tr><td>Preferências</td><td>Tipo de anúncio, logística, tema, CEP de referência, custo fixo e perfil fiscal.</td></tr>
     <tr><td>Suas listas</td><td>Watchlist, histórico de anúncios vistos e a lista de comparação.</td></tr>
     <tr><td>Caches de leitura</td><td>Fichas de anúncio, visitas, tarifas, preços e descrições já consultados, para não repetir a consulta.</td></tr>
-    <tr><td>Sessão da sua conta</td><td>O token de acesso da sua conta SellerScope e, se você conectar, o da sua conta do Mercado Livre.</td></tr>
+    <tr><td>Sessão da sua conta</td><td>O token de acesso e o e-mail da sua conta SellerScope e, se você conectar, o acesso à sua conta do Mercado Livre. O botão “Sair”, no menu de ferramentas, apaga a sessão deste navegador, inclusive o acesso à sua conta do Mercado Livre.</td></tr>
     <tr><td>Contadores de uso</td><td>Quantas consultas a sessão fez, para respeitar os limites de chamada.</td></tr>
     <tr><td>Estado da interface</td><td>Se você já viu a tela de boas-vindas, quais painéis estão recolhidos, quais avisos dispensou.</td></tr>
   </tbody>
@@ -116,21 +117,25 @@
   <li><strong>Identificadores públicos do Mercado Livre</strong>: código do anúncio, do vendedor, do produto de catálogo e da categoria.</li>
   <li><strong>Categoria, tipo de anúncio e preço</strong> quando você consulta a tarifa exata.</li>
   <li><strong>Seu CEP</strong>, quando você consulta o frete de um anúncio. Ele é necessário porque o próprio Mercado Livre exige um destino para calcular frete. <strong>O CEP não é armazenado em claro:</strong> a chave do cache usa um apelido criptográfico dele com um segredo do servidor.</li>
-  <li><strong>Seu token de licença</strong>, para confirmar que a assinatura está ativa.</li>
+  <li><strong>O token da sua conta SellerScope</strong>, para confirmar que a assinatura está ativa. Como todo token de login, ele carrega o e-mail e os dados de cadastro da conta; o servidor lê só o identificador da conta e não guarda o token.</li>
+  <li><strong>O identificador da sua conta SellerScope</strong>, gravado junto com as fichas e os preços que a extensão contribui ao cache compartilhado. Ele serve para rastrear e remover contribuições abusivas e <strong>nunca é devolvido a outros usuários</strong>.</li>
   <li><strong>Dados do anúncio na tela</strong>, quando você pede uma sugestão ao assistente de IA. São os mesmos números que o painel já mostra.</li>
-  <li><strong>Sua conta do Mercado Livre</strong>, apenas se você conectá-la na tela “Minha Loja”: o token de autorização e o seu código de vendedor, para buscar os seus próprios anúncios e vendas.</li>
+  <li><strong>Sua conta do Mercado Livre</strong>, apenas se você conectá-la na tela “Minha Loja”: o token de autorização e o seu código de vendedor, para buscar os seus próprios anúncios e vendas. As vendas são lidas a cada consulta e <strong>não ficam guardadas</strong> no servidor. Já a <strong>data de criação dos seus anúncios</strong> vai para o cache compartilhado por até 90 dias e aparece para outros usuários da extensão nos cards desses anúncios.</li>
 </ul>
 <p>
-  O endereço padrão é <code>sellerscope-ml-api.lucas21sarmento.workers.dev</code>, e ele é
-  editável nas Configurações. <strong>Se você apagar esse campo, a extensão para de fazer
-  qualquer consulta ao servidor</strong> e passa a mostrar apenas o que lê da página aberta.
+  O endereço do servidor é <code>sellerscope-ml-api.lucas21sarmento.workers.dev</code>. Para
+  parar qualquer consulta, <strong>desligue a extensão no interruptor do ícone dela</strong>:
+  desligada, ela não consulta o servidor, não envia nada a ele e não baixa página nenhuma —
+  os painéis continuam na tela, com os números escondidos.
 </p>
 
 <div class="caixa destaque">
   <strong>Cache compartilhado.</strong> Fichas de anúncio e preços observados são gravados num
   cache que outros usuários também leem. São dados públicos do Mercado Livre — os mesmos
-  que qualquer pessoa vê ao abrir o anúncio. <strong>Nada seu vai junto:</strong> nem o seu CEP,
-  nem o seu perfil fiscal, nem os seus custos, nem as suas listas.
+  que qualquer pessoa vê ao abrir o anúncio. Do seu lado, vai junto apenas o identificador
+  da sua conta, guardado para controle de abuso e nunca servido a ninguém. O seu perfil
+  fiscal, os seus custos e as suas listas não vão; o CEP só vai na consulta de frete, e fica
+  guardado como apelido criptográfico.
 </div>
 
 <h3>2. Para o Mercado Livre</h3>
@@ -143,8 +148,8 @@
   eventuais redirecionamentos.
 </p>
 <p>
-  Você pode desligar isso por completo: em Configurações, desmarque a busca de ficha. A
-  extensão fica 100% passiva e usa apenas o que a página de busca já mostra.
+  Você pode desligar isso por completo pelo interruptor no ícone da extensão: desligada,
+  ela fica 100% passiva e não baixa página nenhuma.
 </p>
 
 <h3>3. Para o Supabase (sua conta)</h3>
@@ -174,8 +179,8 @@
   <tbody>
     <tr><td><code>storage</code></td><td>Guardar suas preferências, listas e caches no seu próprio navegador.</td></tr>
     <tr><td><code>identity</code></td><td>Abrir a tela de autorização do Mercado Livre quando você conecta sua conta em “Minha Loja”. Só é usada se você clicar em conectar.</td></tr>
-    <tr><td><code>mercadolivre.com.br</code></td><td>Ler as páginas de busca e de anúncio e desenhar os painéis. É o único site em que a extensão roda.</td></tr>
-    <tr><td><code>*.supabase.co</code></td><td>Login, assinatura e verificação de licença.</td></tr>
+    <tr><td><code>https://*.mercadolivre.com.br</code></td><td>Ler as páginas de busca e de anúncio e desenhar os painéis. É o único site em que a extensão roda.</td></tr>
+    <tr><td><code>https://ddpeoolssvrnxxmuqhxz.supabase.co</code></td><td>Login, assinatura e verificação de licença — só o projeto do SellerScope.</td></tr>
   </tbody>
 </table>
 
@@ -183,8 +188,8 @@
 <table>
   <thead><tr><th>Onde</th><th>Prazo</th></tr></thead>
   <tbody>
-    <tr><td>No seu navegador</td><td>Até você desinstalar a extensão ou limpar os dados do site. Os caches de leitura se renovam sozinhos.</td></tr>
-    <tr><td>No cache do servidor</td><td>De 6 horas a 120 dias, conforme o tipo de dado — todos são dados públicos do Mercado Livre.</td></tr>
+    <tr><td>No seu navegador</td><td>Até você desinstalar a extensão. Limpar os dados do site do Mercado Livre não apaga estes dados, que são da extensão. Os caches de leitura se renovam sozinhos.</td></tr>
+    <tr><td>No cache do servidor</td><td>De 6 horas a 365 dias, conforme o tipo de dado: fichas em 24 horas, série de estoque em 45 dias, datas de criação em 90 dias, preços em 120 dias e a data em que a extensão viu o anúncio pela primeira vez em 365 dias. As séries de estoque e de preço duram enquanto o anúncio continuar sendo atualizado; o identificador da sua conta sai de cada ponto seu quando ele passa do prazo da série.</td></tr>
     <tr><td>Sua conta</td><td>Enquanto a conta existir. Você pode pedir a exclusão pelo e-mail abaixo.</td></tr>
   </tbody>
 </table>
@@ -222,7 +227,7 @@
 </p>
 
 <footer>
-  SellerScope ML · versão 1.0.0 · última atualização em 7 de setembro de 2026
+  SellerScope ML · versão 1.0.0 · última atualização em 15 de setembro de 2026
 </footer>
 
 </div>
