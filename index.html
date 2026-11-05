@@ -63,7 +63,7 @@
 <header>
   <span class="marca"><span class="disco">S</span>SellerScope ML</span>
   <h1>Política de Privacidade</h1>
-  <p class="sub">Vigente desde <strong>15 de setembro de 2026</strong> · versão 1.0.0 da extensão</p>
+  <p class="sub">Vigente desde <strong>15 de setembro de 2026</strong> · versão 1.0.8 da extensão</p>
 </header>
 
 <div class="caixa preencher">
@@ -100,9 +100,10 @@
     <tr><td>Preferências</td><td>Tipo de anúncio, logística, tema, CEP de referência, custo fixo e perfil fiscal.</td></tr>
     <tr><td>Suas listas</td><td>Watchlist, histórico de anúncios vistos e a lista de comparação.</td></tr>
     <tr><td>Caches de leitura</td><td>Fichas de anúncio, visitas, tarifas, preços e descrições já consultados, para não repetir a consulta.</td></tr>
-    <tr><td>Sessão da sua conta</td><td>O token de acesso e o e-mail da sua conta SellerScope e, se você conectar, o acesso à sua conta do Mercado Livre. O botão “Sair”, no menu de ferramentas, apaga a sessão deste navegador, inclusive o acesso à sua conta do Mercado Livre.</td></tr>
+    <tr><td>Sessão da sua conta</td><td>O token de acesso e o e-mail da sua conta SellerScope e, se você conectar, o acesso à sua conta do Mercado Livre. O botão “Sair”, no menu de ferramentas, apaga a sessão deste navegador, inclusive o acesso à sua conta do Mercado Livre. Fica também o resultado da última consulta da assinatura, com a identificação da conta, para a extensão continuar funcionando por até 48 horas se a consulta falhar.</td></tr>
     <tr><td>Contadores de uso</td><td>Quantas consultas a sessão fez, para respeitar os limites de chamada.</td></tr>
-    <tr><td>Estado da interface</td><td>Se você já viu a tela de boas-vindas, quais painéis estão recolhidos, quais avisos dispensou.</td></tr>
+    <tr><td>Aviso de presença</td><td>A data do último aviso de presença (seção “Para o Supabase”), para mandar no máximo um por dia.</td></tr>
+<tr><td>Estado da interface</td><td>Se você já viu a tela de boas-vindas, quais painéis estão recolhidos, quais avisos dispensou.</td></tr>
   </tbody>
 </table>
 
@@ -123,7 +124,9 @@
   <li><strong>Sua conta do Mercado Livre</strong>, apenas se você conectá-la na tela “Minha Loja”: o token de autorização e o seu código de vendedor, para buscar os seus próprios anúncios e vendas. As vendas são lidas a cada consulta e <strong>não ficam guardadas</strong> no servidor. Já a <strong>data de criação dos seus anúncios</strong> vai para o cache compartilhado por até 90 dias e aparece para outros usuários da extensão nos cards desses anúncios.</li>
 </ul>
 <p>
-  O endereço do servidor é <code>sellerscope-ml-api.lucas21sarmento.workers.dev</code>. Para
+  O endereço do servidor é <code>api-ml.sellerscope.com.br</code>. Durante a mudança de
+  endereço, a extensão também pode chamar o anterior,
+  <code>sellerscope-ml-api.lucas21sarmento.workers.dev</code> — o mesmo servidor. Para
   parar qualquer consulta, <strong>desligue a extensão no interruptor do ícone dela</strong>:
   desligada, ela não consulta o servidor, não envia nada a ele e não baixa página nenhuma —
   os painéis continuam na tela, com os números escondidos.
@@ -162,6 +165,14 @@
   O formulário de login roda numa página da <strong>própria extensão</strong>, isolada da página
   do Mercado Livre: nenhum script do site consegue ler o que você digita ali.
 </p>
+  <p>
+    Uma vez por dia, com a extensão ligada, ela também avisa a sua conta que está instalada,
+    que é a extensão do Mercado Livre e qual a versão (o <strong>aviso de presença</strong>). Serve
+    para o site não pedir que você instale o que já instalou e para sabermos quem ainda usa uma
+    versão com defeito depois de uma correção. Vai com o token da sua sessão, então fica ligado à
+    sua conta, e não leva nada do que você vê ou faz no Mercado Livre. Desligada pelo interruptor,
+    a extensão não manda o aviso.
+  </p>
 
 <h2>O que a extensão não faz</h2>
 <ul>
@@ -209,7 +220,7 @@
 <h2>Quem responde por estes dados</h2>
 <div class="caixa preencher">
   <p style="margin:0 0 8px"><strong>Controlador:</strong> [RAZÃO SOCIAL] — CNPJ [00.000.000/0001-00]</p>
-  <p style="margin:0"><strong>Contato:</strong> <a href="mailto:suporte@sellerscope.com.br">suporte@sellerscope.com.br</a></p>
+  <p style="margin:0"><strong>Contato:</strong> <a href="mailto:contatosellerscope@gmail.com">contatosellerscope@gmail.com</a></p>
 </div>
 
 <h2>Mudanças nesta política</h2>
@@ -227,7 +238,7 @@
 </p>
 
 <footer>
-  SellerScope ML · versão 1.0.0 · última atualização em 15 de setembro de 2026
+  SellerScope ML · versão 1.0.8 · última atualização em 5 de novembro de 2026
 </footer>
 
 </div>
